@@ -1,0 +1,20 @@
+{application, epublisher,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { epublisher_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+	  sasl,
+    cowlib,
+    ranch,
+    cowboy,
+    emqttc
+   ]},
+  {env,[]},
+  {modules, [epublisher_app, epublisher_sup, emqtt_server_manager, request_handler]},
+  {maintainers, []},
+  {licenses, []},
+  {links, []}
+ ]}.
