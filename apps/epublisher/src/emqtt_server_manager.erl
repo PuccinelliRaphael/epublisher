@@ -18,7 +18,7 @@ start_server_listener() ->
   register(emqtt_server, Pid),
   server_listener().
 
-%%
+%% Function
 server_listener() ->
   receive
     {publish, Broker, Topic, Msg} -> spawn(fun() -> monitor_publisher(Broker, Topic, Msg, 2) end),
